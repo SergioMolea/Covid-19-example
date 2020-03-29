@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+$blueMain:#203f6bf5;
+$blueMainOp:#122c508c;
+
+body{
+	background: linear-gradient(90deg, #1f1f1f 0%, #102b41 17%, #193953 32%, #234d54 100%);
+}
+
+.cursor-pointer{
+	cursor: pointer;
+}
+.btn-blue{
+	background: $blueMainOp;
+	a{
+		color: white;
+		font-weight: 700;
+		text-decoration: none;
+	}
+	&:hover{
+		background: $blueMain;
+		width: 50%;
+		transition: width 2s;
+	}
+}

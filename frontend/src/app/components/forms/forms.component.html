@@ -1,0 +1,66 @@
+<div class="container w-100">
+	<form class="form py-5" [formGroup]="form">
+		<h3 class="display-4 font-italic text-white font-weight-bold">Ingrese los datos para su donación</h3>
+		<div class="row my-5">
+			<div class=" col-12 col-md-8 text-white">
+				<div class="form-group w-75">
+					<label for="nombre" class="font-weight-bold">Nombre: <span style="color:red">*</span></label>
+					<input type="text" name="nombre" class="form-control rounded" formControlName="nombre">
+				</div>
+				<div class="form-group w-75">
+					<label for="Apellido" class="font-weight-bold">Apellido:<span style="color:red">*</span></label>
+					<input type="text" name="apellido"class="form-control rounded" formControlName="apellido">
+				</div>
+				<div class="form-group w-75">
+					<label for="email" class="font-weight-bold">Email:<span style="color:red">*</span></label>
+					<input type="email" name="email" class="form-control rounded" formControlName="email">
+				</div>
+				<div class="form-group w-75">
+					<label for="pais" class="font-weight-bold">Organización:<span style="color:red">*</span></label>
+					<select class="form-control" (change)="ongSeleted = $event.target.value">
+						<option selected>ONG</option>
+						<option value="REMAR">REMAR</option>
+						<option value="EMAUS">EMAUS</option>
+						<option value="MAIOR">MAIOR</option>
+					</select>
+				</div>
+				<div class="form-group w-75">
+					<label for="telefono" class="font-weight-bold">Telefono:<span style="color:red">*</span></label>
+					<input type="text" name="telefono" class="form-control rounded" formControlName="telefono">
+				</div>
+				<div class="form-group w-75">
+					<label for="donacion" class="font-weight-bold p">Donación:<span style="color:red">*</span></label>
+					<input type="number" name="donacion" class="form-control rounded" formControlName="donacion">
+				</div>
+				<button class="btn btn-block btn-info rounded font-weight-bold w-75" (click)="sendDonation()">DONAR</button>
+			</div>
+
+			<div class="d-none d-md-inline col-md-4">
+				<h4 class="font-weight-bold text-white text-center">ONG</h4>
+				<div class="card text-white bg-info rounded">
+					<img class="card-img h-25" src="../../../assets/images/remar.png" name="REMAR" (click)="selectONG($event)">
+					<!-- <div class="card-body">
+						<h4 class="card-title">REMAR</h4>
+						<p class="card-text">Las Palmas de Gran Canaria ( Las Palmas)</p>
+					</div> -->
+				</div>
+				<div class="card text-white bg-info mt-3 rounded">
+					<img class="card-img h-25" src="../../../assets/images/emaus.jpg" name="EMAUS" (click)="selectONG($event)">
+					<!-- <div class="card-body">
+						<h4 class="card-title">EMAÚS</h4>
+						<p class="card-text">Arrasate Mondragon (Guipúzcoa)</p>
+					</div> -->
+				</div>
+				<div class="card text-white bg-info mt-3 rounded">
+					<img class="card-img h-25" src="../../../assets/images/maior.jpg" name="MAIOR" (click)="selectONG($event)">
+					<!-- <div class="card-body">
+						<h4 class="card-title">MAIOR</h4>
+						<p class="card-text">MADRID(MADRID)</p>
+					</div> -->
+				</div>
+			</div>
+
+		</div>
+	</form>
+</div>
+

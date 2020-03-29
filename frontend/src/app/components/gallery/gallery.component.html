@@ -1,0 +1,17 @@
+<div class="container-fluid">
+	<div class="row no-gutters justify-content-center">
+		<h1 class="display-2 text-center text-white font-weight-bold">Galería</h1>
+		<div class="col-11">
+			<div class="row card-group" *ngIf="imagenes">
+				<div class="col-md-3 my-2" *ngFor="let image of imagenes">	
+					<div class="card p-2 shadow">
+						<img class="card-img-top img-fluid" [src]="image.url">
+						<div class="card-body">
+							<h6 class="card-title text-justify text-capitalize">{{image.title}}</h6>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

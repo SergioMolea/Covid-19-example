@@ -1,0 +1,203 @@
+// @media (min-width: 576px) { ... }
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) { 
+    h1{
+        font-size: 4vw;
+    }
+    h2{
+        font-size: 3vw;
+    }
+    p{
+        font-size: 1.8vw;
+    }
+    #human{
+        height: (inherit!important);
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 768px) and (max-width: 992px)  {
+    h1{
+        font-size: 4vw;
+    }
+    p{
+        font-size: 1.8vw;
+    }
+    #human{
+        height: (inherit!important);
+    }
+}
+
+@media (min-width: 992) and (max-width: 1150px) { 
+    #human{
+        height: (85vh!important);
+    }
+}
+
+.news-section{
+	.new-left{
+		height: 25rem;
+		max-height: 25rem;
+		background-image: url(../../../assets/images/virus.png);
+		background-size: cover;
+		border-bottom: .25rem black solid;
+		div.col-md-8,div.col-xs-12{
+    		background: #d2d2d247;
+            max-height: -webkit-fill-available;
+            overflow: hidden;
+		}
+	}
+	.new-right{
+		height: 25rem;
+		max-height: 25rem;
+		background-image: url(../../../assets/images/pastillas.png);
+		background-size: cover;
+		border-bottom: .25rem black solid;
+		border-top: .25rem black solid;
+		div.col-md-8,div.col-xs-12{
+    		background: #02020226;
+            max-height: -webkit-fill-available;
+            overflow: hidden;
+		}
+	}
+	div .col-md-8,div .col-xs-12{ 
+		text-shadow: 3px 3px 3px black;
+    	border-radius: 2.25rem;
+		h1{
+			text-align: center;
+			font-weight: 700;
+        }
+	}
+}
+
+.section-options{
+	// height: 50vh;
+	// max-height: 50vh;
+	padding: 3rem 0 1rem 0rem;
+	background: white;
+	background-image: url(../../../assets/images/virus.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position-y: 98%;
+	text-shadow: black 4px 2px 4px; 
+	border-bottom: .25rem black solid;
+	.col-3{
+		grid-template-rows: repeat(2,auto);
+	}
+}
+
+.last-section{
+	height: 65vh;
+	max-height: 65vh;
+	background: rgb(79,76,128);
+    border-top: .25rem black solid;
+    background: linear-gradient(90deg, #1f1f1f 0%, #102b41 17%, #193953 32%, #234d54 100%);
+}
+
+#human{
+	height: 91%;
+	position: absolute;
+	transform: translate(-88px, 2px);
+}
+
+
+.hex {
+        width:170px;
+        height:97px;
+        background-color: #ccc;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;                   
+        background-size: auto 173px;                                                    
+        position: relative;
+        float:left;
+        margin:25px 5px;
+        text-align:center;
+        zoom:1.3;
+}
+
+.list-group-item{
+    border-bottom: .25rem black solid;
+    background-repeat: no-repeat;
+    background-color:  #1a3a54;
+    text-shadow: black 4px 2px 4px;
+    &:hover{
+        box-shadow: black 7px 7px 6px inset;
+    }
+    &:first-child{
+        background-size: 80% 152%;
+        background-position: left;
+    }
+    &:nth-child(2){
+        background-size: 80% 115%;  
+        background-position: right; 
+    }
+    &:last-child{
+        background-size: 80% 134%;
+        background-position: left;
+    }
+}
+                
+        .hex.hex-gap {
+                margin-left: 86px;
+        }
+        
+        .hex a {
+                display:block;
+                width: 100%;
+                height:100%;
+                text-indent:-9999em;
+                position:absolute;
+                top:0;
+                left:0;
+                border-left: 2px #000000d6 solid;
+	  			border-right: 2px solid #000000d6;
+        }
+
+        .hex .corner-1,
+        .hex .corner-2 {
+                position: absolute;
+                top:0;
+                left:0;
+                width:100%;
+                height:100%;
+                background: inherit;                                                            
+                z-index:1;                                             
+                overflow:hidden;                
+                backface-visibility: hidden;
+                border-left: 2px #000000d6 solid;
+	  			border-right: 2px solid #000000d6;                    
+        }
+        
+        .hex .corner-1 {
+            transform: rotate(60deg);
+        }
+        
+        .hex .corner-2 {
+            transform: rotate(-60deg);
+        }
+        
+        .hex .corner-1:before,
+        .hex .corner-2:before {
+          width: 167px;
+          height: 177px;
+          content: '';
+          position: absolute;
+          background: inherit;
+          top:0;
+          left: 0;
+          z-index: 1;
+          background: inherit;
+          background-repeat:no-repeat;
+                backface-visibility: hidden;                              
+        }                       
+        
+
+        .hex .corner-1:before {
+                transform: rotate(-60deg) translate(-84px, 8px);        
+          transform-origin: 0 0;
+        }                       
+        
+        .hex .corner-2:before {
+                transform: rotate(60deg) translate(-35px, -23px);       
+                bottom:0;
+        }               
